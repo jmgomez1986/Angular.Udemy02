@@ -1,20 +1,30 @@
 <label>Server Name</label>
+
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onUpdateServerName($event)"> -->
 <input
   type="text"
   class="form-control"
-  (input)="onUpdateServerName($event)">
-  <p>{{ serverName }}</p>
+  [(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
   (click)=onCreateServer()>
   Add Server
 </button>
+
 <!-- <p [innerText]="allowNewServer"></p> -->
+
 <p>{{ serverCreationStatus }}</p>
+
 <p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
 
 <!-- {{ }} son para interpolacion, es el enlace del typescript con el template, entre las llaves se pone la variable de
 typescript lo que esta como interpolacion se hace string -->
 <!-- cuando una propiedad esta entre [] hace que esa propiedad se enlace de forma dinamica a la variable del typescript -->
 <!-- Los () indican un enlace de un evento -->
+<!-- [()] Es un enlace bidireccional -->

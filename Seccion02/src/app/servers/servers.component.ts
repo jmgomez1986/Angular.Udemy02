@@ -10,7 +10,7 @@ export class ServersComponent {
   serverCreationStatus = 'No server was created!';
   serverId = 10;
   serverStatus = 'offline';
-  serverName = '';
+  serverName = 'TestServer';
 
   constructor() {
     setTimeout(() => {
