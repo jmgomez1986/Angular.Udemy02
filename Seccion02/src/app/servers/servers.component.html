@@ -1,3 +1,9 @@
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer">
+  Add Server
+</button>
+<!-- cuando una propiedad esta entre [] hace que esa propiedad se enlace de forma dinamica a la variable del typescript -->
 <p>
   {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
 <!-- {{ }} son para interpolacion, es el enlace del typescript con el template, entre las llaves se pone la variable de

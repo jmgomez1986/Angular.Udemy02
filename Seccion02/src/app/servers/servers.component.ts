@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent {
-
+  allowNewServer = false;
   serverId = 10;
   serverStatus = 'offline';
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   getServerStatus() {
     return this.serverStatus;
