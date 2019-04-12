@@ -10,6 +10,7 @@ export class ServersComponent {
   serverCreationStatus = 'No server was created!';
   serverId = 10;
   serverStatus = 'offline';
+  serverName = '';
 
   constructor() {
     setTimeout(() => {
@@ -23,5 +24,10 @@ export class ServersComponent {
 
   onCreateServer() {
     this.serverCreationStatus = 'Server was created!';
+  }
+
+  onUpdateServerName(event: Event) {
+    console.log(event);
+    this.serverName = ( event.target as HTMLInputElement).value;
   }
 }
